@@ -26,7 +26,7 @@ const counterSlice = createSlice({
 });
 
 const store = configureStore({
-  counter: counterSlice.reducers
+  reducer: counterSlice.reducer
 });
 // const counterReducer = (state = initialState, action) => {
 //   if(action.type === 'increment') {
