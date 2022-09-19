@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const NewTodo = () => {
+  const todoTextInputRef = useRef();
+
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
   };
@@ -8,7 +10,7 @@ const NewTodo = () => {
   return (
     <form onSubmit={submitHandler}>
       <label htmlFor='text'>Todo text</label>
-      <input type='text' id='text'/>
+      <input type='text' id='text' ref={todoTextInputRef}/>
       <button>Add Todo</button>
     </form>
   );
